@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-AU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RPG Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <table>
+  	<tr>
+  	  <td>
+  		<h1>Table Game</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+		<div class="stat">Day <var id="stat-day" class="stat-value"></var></div>
+		<div class="stat">Distance <var id="stat-distance" class="stat-value"></var></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+		<div class="updates-area" id="updates-area"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+		<button id="step" type="button">Step</button>
+      </td>
+    </tr>
+  </table>
+  <script src="Event.js" type="text/javascript"></script>
+  <script src="Player.js" type="text/javascript"></script>
+  <script src="UI.js" type="text/javascript"></script>
+  <script src="TableGame.js" type="text/javascript"></script>
+</body>
+
+</html>
