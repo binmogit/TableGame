@@ -1,5 +1,5 @@
 # TableGame
-Practicing javascript, the project is a focus on script readability.
+Practicing javascript, the project is a focus on script readability.<br>
 <a href="https://binmogit.github.io/TableGame/">https://binmogit.github.io/TableGame/</a>
 
 Some references and tools that have been used:
