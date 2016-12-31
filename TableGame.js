@@ -5,7 +5,9 @@ TableGame.Game.init = function() {
 	this.player = TableGame.Player;
 	this.player.init({
 		day: 0,
-		distance: 0
+		distance: 0,
+		mass: 1,
+		speed: 1
 	});
 	this.player.ui = this.ui;
 	this.ui.game = this;
@@ -18,12 +20,14 @@ TableGame.Game.startGame = function() {
 	this.ui.refreshStats();
 	document.getElementById('step').addEventListener('click', this.step.bind(this));
 }
-TableGame.Game.step = function(timestamp) {
+TableGame.Game.step = function() {
 	this.updateGame();
 }
 TableGame.Game.updateGame = function() {	
 	this.player.day++;
-	this.player.updateDistnce();
+	this.player.updateDistance();
+	
+	this.ui.notify('Complete', 'system');
 	this.ui.refreshStats();
 }
 TableGame.Game.init();

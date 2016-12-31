@@ -10,6 +10,10 @@ body {
   overflow: hidden;
 }
 
+table {
+	width: 350px;
+}
+
 table, td, tr {
 	border-collapse: collapse;
 }
@@ -18,22 +22,28 @@ td, tr {
 	border: 1px solid black;
 }
 
-#stat-value {
+.stat-value {
   float: right;
 }
 
 #updates-area {
-  background-color: white;
-  float: left;
-  width: 350px;
-  margin: 10px;
   height: 150px;
-  padding: 10px;
-  font-size: 12px;
   overflow-y: scroll;
 }
 
  
 .update-system {
   color: blue;
+}
+
+#shop {
+  height: 90px;
+}
+ 
+.product {
+  float: left;
+  margin: 5px;
+  padding: 2px;
+  border: 1px solid black;
+  font-size: 12px;
 }
