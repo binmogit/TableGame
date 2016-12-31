@@ -36,8 +36,13 @@ td, tr {
   color: blue;
 }
 
-#shop {
+#shop-area {
   height: 90px;
+  overflow-y: scroll;
+}
+
+.item {
+  border: 1px solid black;
 }
  
 .product {

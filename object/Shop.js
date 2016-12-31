@@ -1,14 +1,21 @@
 var TableGame = TableGame || {};
 TableGame.Shop = {};
 TableGame.Shop.init = function(){
-	this.item = {
-		name : 'item1',
-		cost : 300
-	};
-	TableGame.SHOP_PRODUCT_AREA.innerHTML = (this.item.name + " " + this.item.cost);
+	this.name = 'shop';
+	this.addItem(this.newItem('test', 300));
+	// = (this.item.name + " " + this.item.cost);
 }
 
-TableGame.Shop.newItem = function(stats){
-	this.item.name = stats.name;
-	this.item.cost = stats.cost;
-};
+TableGame.Shop.newItem = function(name, cost){
+	var item = {};
+	item.name = name;
+	item.cost = cost;
+	return item;
+}
+
+TableGame.Shop.addItem = function(item){
+	var d = document.createElement('div');
+	d.setAttribute('class', 'item');
+	d.innerHTML = ('Name: ' + item.name + ', Cost: ' + item.cost);
+	TableGame.SHOP_PRODUCT_AREA.insertBefore(d, TableGame.SHOP_PRODUCT_AREA.childNodes[0]);
+}
