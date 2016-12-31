@@ -1,10 +1,12 @@
 var TableGame = TableGame || {};
-
 TableGame.UI = {
 };
 
 TableGame.UI.notify = function(message, type){
-	document.getElementById('updates-area').innerHTML = '<div class="update-' + type + '">Day '+ this.player.day + ': ' + message+'</div>' + document.getElementById('updates-area').innerHTML;
+	var d = document.createElement('div');
+	d.setAttribute('class', ('update-' + type));
+	d.innerHTML = ('Day ' + this.player.day + ': ' + message);
+	TableGame.UPDATES_AREA.insertBefore(d, TableGame.UPDATES_AREA.childNodes[0]);
 };
 
 TableGame.UI.refreshStats = function(){
